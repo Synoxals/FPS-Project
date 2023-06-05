@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Keypad : Interactable
 {
+    public GameObject Changed;
+    public Vector3 activePosition = new Vector3(9, 3.5f, 4.2f);
+    public int stairSpeed = 3;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +21,8 @@ public class Keypad : Interactable
 
     protected override void Interact()
     {
-        Debug.Log("Interacted with" + gameObject.name);
+        Debug.Log("Interacted with " + gameObject.name);
+        
+        Changed.transform.Translate(0 , 0, -2.8f);
     }
 }
