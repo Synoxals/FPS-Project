@@ -5,6 +5,8 @@ using UnityEngine;
 public abstract class Interactable : MonoBehaviour
 {
     public string promptMessage;
+    // Add or remove interaction Event component
+    public bool useEvents;
     
     public void BaseInteract()
     {
